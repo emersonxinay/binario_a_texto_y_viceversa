@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Texto a Binario</title>
+</head>
+
+<body>
+  <h1>Convertidor de Texto y Binario</h1>
+  <h2>Texto a Binario</h2>
+  <form action="/texto_a_binario" method="post">
+    <textarea name="texto" placeholder="Ingrese su texto aquí"></textarea><br>
+    <input type="submit" value="Convertir a Binario">
+  </form>
+  {% if resultado_texto %}
+  <h3>Resultado en Binario:</h3>
+  <p>{{ resultado_texto }}</p>
+  {% endif %}
+
+  <h2>Binario a Texto</h2>
+  <form action="/binario_a_texto" method="post">
+    <textarea name="binario" placeholder="Ingrese el código binario aquí"></textarea><br>
+    <input type="submit" value="Convertir a Texto">
+  </form>
+  {% if resultado_binario %}
+  <h3>Texto Resultante:</h3>
+  <p>{{ resultado_binario }}</p>
+  {% endif %}
+
+
+</body>
+
+</html>
